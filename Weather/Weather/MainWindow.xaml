@@ -1,0 +1,23 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Weather" xmlns:itemview="clr-namespace:Weather.itemview" x:Class="Weather.MainWindow"
+        Height="600" Width="1309.5" Loaded="Window_Loaded" WindowState="Maximized" >
+
+    <Border BorderBrush="Gray" CornerRadius="6" BorderThickness="1">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <local:WeatherContentInfoView Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="weatherContentView" Height="300" Width="300"/>
+        <ScrollViewer Grid.Column="1" x:Name="scrollview">
+            <StackPanel Name="stackpanel" Orientation="Vertical">
+
+            </StackPanel>
+        </ScrollViewer>
+
+
+    </Grid>
+    </Border>
+</Window>

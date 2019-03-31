@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="Weather.WeatherContentInfoView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Weather"
+             mc:Ignorable="d" >
+    <Border BorderBrush="Gray" CornerRadius="5" BorderThickness="1" Padding="30">
+        <Border.Effect>
+            <DropShadowEffect Color="Black" BlurRadius="1" ShadowDepth="0"/>
+        </Border.Effect>
+        
+    <Grid Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Name="txtBlkProvince" Margin="4">---</TextBlock>
+            <TextBlock Name="txtBlkRegion" Grid.Column="1" Margin="4">---</TextBlock>
+        </Grid>
+        <!--城市天气信息-->
+        <Grid Grid.Row="1"  >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock VerticalAlignment="Center" Grid.Column="0" Grid.Row="0">湿度:</TextBlock>
+                <TextBlock VerticalAlignment="Center" Grid.Column="0" Grid.Row="1">Pm2.5:</TextBlock>
+                <TextBlock VerticalAlignment="Center" Grid.Column="0" Grid.Row="2">Pm10:</TextBlock>
+                <TextBlock VerticalAlignment="Center" Grid.Column="0" Grid.Row="3">空气质量:</TextBlock>
+                <TextBlock VerticalAlignment="Center" Grid.Column="0" Grid.Row="4">温度:</TextBlock>
+                <TextBlock VerticalAlignment="Center" Grid.Column="0" Grid.Row="5">健康提醒:</TextBlock>
+                <TextBlock VerticalAlignment="Center" Grid.Column="0" Grid.Row="6">更新时间:</TextBlock>
+                <TextBlock VerticalAlignment="Center" Name="TxtBlkShiDu"  Grid.Column="1" Grid.Row="0">--</TextBlock>
+                <TextBlock VerticalAlignment="Center" Name="TxtBlkPm25"  Grid.Column="1" Grid.Row="1">--</TextBlock>
+                <TextBlock  VerticalAlignment="Center" Name="TxtBlkPm10"  Grid.Column="1" Grid.Row="2">--</TextBlock>
+                <TextBlock VerticalAlignment="Center" Name="TxtBlkKongQiZhiLiang"  Grid.Column="1" Grid.Row="3">--</TextBlock>
+                <TextBlock VerticalAlignment="Center" Name="TxtBlkWenDu"  Grid.Column="1" Grid.Row="4">--</TextBlock>
+                <TextBlock VerticalAlignment="Center" Name="TxtBlkJianKangTiXing"  Grid.Column="1" Grid.Row="5">--</TextBlock>
+                <TextBlock VerticalAlignment="Center" Name="TxtBlkUpdateTime"  Grid.Column="1" Grid.Row="6">--</TextBlock>
+        </Grid>
+        
+    </Grid>
+    </Border>
+</UserControl>
